@@ -1,9 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('One') {
+        stage('Build') {
             steps {
-                sh ' echo "Step One" '
+                sh '''			 
+			echo "BUILD"
+			echo "$HOME"
+			cd final_final_master/src/
+			go install ./api/api.go ./api/convert.go
+			cat $HOME/bin/ 
+		
+'''
             }
         }
         stage('Two') {
