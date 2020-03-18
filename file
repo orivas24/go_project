@@ -1,0 +1,227 @@
+--- FAIL: TestValidCidrToMask (0.00s)
+    convert_test.go:12: 
+        	Error Trace:	convert_test.go:12
+        	Error:      	Not equal: 
+        	            	expected: "128.0.0.0"
+        	            	actual  : "1"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-128.0.0.0
+        	            	+1
+        	Test:       	TestValidCidrToMask
+    convert_test.go:13: 
+        	Error Trace:	convert_test.go:13
+        	Error:      	Not equal: 
+        	            	expected: "255.255.0.0"
+        	            	actual  : "16"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-255.255.0.0
+        	            	+16
+        	Test:       	TestValidCidrToMask
+    convert_test.go:14: 
+        	Error Trace:	convert_test.go:14
+        	Error:      	Not equal: 
+        	            	expected: "255.255.248.0"
+        	            	actual  : "21"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-255.255.248.0
+        	            	+21
+        	Test:       	TestValidCidrToMask
+    convert_test.go:15: 
+        	Error Trace:	convert_test.go:15
+        	Error:      	Not equal: 
+        	            	expected: "255.255.255.255"
+        	            	actual  : "32"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-255.255.255.255
+        	            	+32
+        	Test:       	TestValidCidrToMask
+--- FAIL: TestValidMaskToCidr (0.00s)
+    convert_test.go:21: 
+        	Error Trace:	convert_test.go:21
+        	Error:      	Not equal: 
+        	            	expected: "1"
+        	            	actual  : "128.0.0.0"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-1
+        	            	+128.0.0.0
+        	Test:       	TestValidMaskToCidr
+    convert_test.go:22: 
+        	Error Trace:	convert_test.go:22
+        	Error:      	Not equal: 
+        	            	expected: "16"
+        	            	actual  : "255.255.0.0"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-16
+        	            	+255.255.0.0
+        	Test:       	TestValidMaskToCidr
+    convert_test.go:23: 
+        	Error Trace:	convert_test.go:23
+        	Error:      	Not equal: 
+        	            	expected: "21"
+        	            	actual  : "255.255.248.0"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-21
+        	            	+255.255.248.0
+        	Test:       	TestValidMaskToCidr
+    convert_test.go:24: 
+        	Error Trace:	convert_test.go:24
+        	Error:      	Not equal: 
+        	            	expected: "32"
+        	            	actual  : "255.255.255.255"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-32
+        	            	+255.255.255.255
+        	Test:       	TestValidMaskToCidr
+--- FAIL: TestInvalidMaskToCidr (0.00s)
+    convert_test.go:40: 
+        	Error Trace:	convert_test.go:40
+        	Error:      	Not equal: 
+        	            	expected: "Invalid"
+        	            	actual  : "0.0.0.0"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Invalid
+        	            	+0.0.0.0
+        	Test:       	TestInvalidMaskToCidr
+    convert_test.go:41: 
+        	Error Trace:	convert_test.go:41
+        	Error:      	Not equal: 
+        	            	expected: "Invalid"
+        	            	actual  : "-1"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Invalid
+        	            	+-1
+        	Test:       	TestInvalidMaskToCidr
+    convert_test.go:42: 
+        	Error Trace:	convert_test.go:42
+        	Error:      	Not equal: 
+        	            	expected: "Invalid"
+        	            	actual  : "33"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Invalid
+        	            	+33
+        	Test:       	TestInvalidMaskToCidr
+--- FAIL: TestInvalidCidrToMask (0.00s)
+    convert_test.go:48: 
+        	Error Trace:	convert_test.go:48
+        	Error:      	Not equal: 
+        	            	expected: "Invalid"
+        	            	actual  : "0"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Invalid
+        	            	+0
+        	Test:       	TestInvalidCidrToMask
+    convert_test.go:49: 
+        	Error Trace:	convert_test.go:49
+        	Error:      	Not equal: 
+        	            	expected: "Invalid"
+        	            	actual  : "0.0.0.0.0"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Invalid
+        	            	+0.0.0.0.0
+        	Test:       	TestInvalidCidrToMask
+    convert_test.go:50: 
+        	Error Trace:	convert_test.go:50
+        	Error:      	Not equal: 
+        	            	expected: "Invalid"
+        	            	actual  : "255.255.255"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Invalid
+        	            	+255.255.255
+        	Test:       	TestInvalidCidrToMask
+    convert_test.go:51: 
+        	Error Trace:	convert_test.go:51
+        	Error:      	Not equal: 
+        	            	expected: "Invalid"
+        	            	actual  : "11.0.0.0"
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Invalid
+        	            	+11.0.0.0
+        	Test:       	TestInvalidCidrToMask
+--- FAIL: TestInvalidIpv4 (0.00s)
+    convert_test.go:58: 
+        	Error Trace:	convert_test.go:58
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestInvalidIpv4
+    convert_test.go:59: 
+        	Error Trace:	convert_test.go:59
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestInvalidIpv4
+    convert_test.go:60: 
+        	Error Trace:	convert_test.go:60
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestInvalidIpv4
+    convert_test.go:61: 
+        	Error Trace:	convert_test.go:61
+        	Error:      	Not equal: 
+        	            	expected: false
+        	            	actual  : true
+        	Test:       	TestInvalidIpv4
+FAIL
+exit status 1
+FAIL	_/home/cloud_user/go_project	0.002s
