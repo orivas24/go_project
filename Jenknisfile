@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+		// Install the desired Go version
+		def root = tool name: 'go_1.13.3', type: 'go'
+		// Export environment variables pointing to the directory where Go was installed
+		withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"]) {
+                sh '''			 
+			echo "BUILD"
+			echo "$HOME"
+			go version
+			#cd $HOME/final_final_master/src/
+			#go install ./api/api.go ./api/convert.go
+			#cat $HOME/bin/ 
+		
+		'''
+            }
+        }
+        stage('Two') {
+            steps {
+                sh ' echo "Step Two" '
+            }
+        }
+        stage('Three') {
+            steps {
+                sh ' echo "Step Three" '
+            }
+        }
+    }
+}
+ 
