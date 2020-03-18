@@ -6,11 +6,12 @@ pipeline {
                 sh '''			 
 			echo "BUILD"
 			echo "$HOME"
-			cd final_final_master/src/
+			echo go version
+			cd $HOME/final_final_master/src/
 			go install ./api/api.go ./api/convert.go
 			cat $HOME/bin/ 
 		
-'''
+		'''
             }
         }
         stage('Two') {
