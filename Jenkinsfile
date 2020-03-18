@@ -6,10 +6,10 @@ pipeline {
                 sh '''			 
 			echo "BUILD"
 			echo "$HOME"
-			echo go version
-			cd $HOME/final_final_master/src/
-			go install ./api/api.go ./api/convert.go
-			cat $HOME/bin/ 
+			go version
+			#cd $HOME/final_final_master/src/
+			#go install ./api/api.go ./api/convert.go
+			#cat $HOME/bin/ 
 		
 		'''
             }
